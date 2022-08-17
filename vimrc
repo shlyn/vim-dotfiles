@@ -62,7 +62,11 @@ set breakindent
 
 set title
 set autoread
-set mouse=a " 鼠标支持
+
+" 为空时不支持鼠标
+" a 表示支持所有模式
+" i 插入模式鼠标可用
+set mouse=i 
 
 syntax on
 filetype plugin on
@@ -75,16 +79,15 @@ set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
 hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 
 " vim-plug configration
-" call plug#begin()
 " Make sure you use single quotes
-
 " The default plugin directory will be as follows:
 " - vim (Linux/macOS): '~/.vim/plugged'
 " You can specify a custom plugin directory by passing it as the argument
 " - e.g. `call plug#begin('~/.vim/plugged')`
 " Avoid using standard Vim directory names like 'plugin'
-
+call plug#begin()
+" nerdtree
 " On-demand loading
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" call plug#end()
+call plug#end()

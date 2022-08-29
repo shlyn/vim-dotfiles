@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/home/stretch/aptos/move/language/documentation/tutorial/step_1/BasicCoin/sources'
-let g:netrw_dirhist_1='/home/stretch/aptos/move/language/documentation/tutorial/step_1/BasicCoin'
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/stretch/aptos/move/language'
+let g:netrw_dirhist_2='/home/stretch/aptos/move'
+let g:netrw_dirhist_1='/home/stretch/aptos'
+let g:netrw_dirhist_0='/home/stretch'
+let g:netrw_dirhist_9='/home/stretch/.ssh'
+let g:netrw_dirhist_8='/home/stretch'
+let g:netrw_dirhist_7='/home/stretch/aptos'
+let g:netrw_dirhist_6='/home/stretch/aptos/move'
+let g:netrw_dirhist_5='/home/stretch/aptos/move/language'
+let g:netrw_dirhist_4='/home/stretch/.vim/plugged/move.vim/syntax'

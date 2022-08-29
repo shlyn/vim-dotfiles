@@ -1,21 +1,29 @@
-" Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
-
+" => Basic-Options-set  -----{{{1
+" => ui -----{{{2
 set nocompatible
-" ----------> ui
 set background=dark
 set title
 set number
 set showcmd
-" ----------> fold
+set cursorline
+set cursorlineopt=screenline
+" ----------> statusline
+" set laststatus=2
+" set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
+" hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
+" => fold -----{{{2
 set foldenable
-set foldmethod=syntax
-" ----------> backup
+if expand('%:e') == ''
+    set foldmethod=marker
+else 
+    set foldmethod=indent
+endif
+" => backup -----{{{2
 set noundofile
 set nobackup
 set noswapfile
 " set undodir=~/.undodir
-" ----------> indent and tab
+" => formatter -----{{{2
 set autoindent
 set breakindent
 set copyindent
@@ -24,21 +32,15 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set smarttab
-" ----------> edit
+" => edit -----{{{2
 syntax on
 filetype plugin on
 set smartcase
 set showbreak=➥
 set autoread
 set mouse=i 
-set cursorline
-set cursorlineopt=screenline
-" ----------> statusline
-" set laststatus=2
-" set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
-" hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 
-" ---------> vim-plug <-----------
+" => vim-plug -----{{{1
 " Avoid using standard Vim directory names like 'plugin'
 " 'on' => On-demand loading
 call plug#begin('~/.vim/plugged')
@@ -51,5 +53,6 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'rvmelkonian/move.vim'
 call plug#end()
 
-" ------> NERDTree config
+" => Plugins-configruation -----{{{1
+" => NERDTree config ------{{{22
 map <C-t> :NERDTreeToggle<CR>

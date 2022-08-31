@@ -64,6 +64,7 @@ Plug 'tomlion/vim-solidity'
 Plug 'voldikss/vim-floaterm'
 call plug#end()
 " => NERDTree config ------{{{2
+let NERDTreeShowHidden=1
 map <C-t> :NERDTreeToggle<CR>
 " => vim-lsp ------{{{2
 " LspInstallServer, LspUninstallServer

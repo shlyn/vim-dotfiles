@@ -1,15 +1,16 @@
 " => Basic-Options-set -----{{{1
 " => ui ----- {{{2
-set nocompatible
-set background=dark
+" set nocompatible
+set background=light
 set title
 set number
 set showcmd
-set cursorline
-set cursorlineopt=number "screenline,line,number
+" set cursorline
+" set cursorlineopt=number "screenline,line,number
 "set laststatus=2
 "set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
 "hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
+
 " => edit -----{{{2
 set encoding=UTF-8
 set foldenable

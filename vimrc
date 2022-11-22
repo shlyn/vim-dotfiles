@@ -1,6 +1,5 @@
 " => Basic-Options-set -----{{{1
-" => ui ----- {{{2
-" set nocompatible
+" ui
 set background=light
 set title
 set number
@@ -11,7 +10,6 @@ set showcmd
 "set statusline=%<%f%=\ [%1*%M%*%n%R%H]\ %-19(%3l,%02c%03V%)%O'%02b'
 "hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 
-" => edit -----{{{2
 set encoding=UTF-8
 set foldenable
 if expand('%:e') == ''
@@ -22,13 +20,13 @@ endif
 set noundofile
 set nobackup
 set noswapfile
-" set undodir=~/.undodir
+
 syntax on
 filetype plugin on
 set smartcase
 set showbreak=➥
 set autoread
-set mouse=i " i,n,a
+set mouse=a " i,n,a
 set autoindent
 set breakindent
 set copyindent
@@ -37,7 +35,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set smarttab
-
 set modifiable
 
 " => vim-plug -----{{{1
@@ -64,9 +61,11 @@ Plug 'tomlion/vim-solidity'
 " floaterm
 Plug 'voldikss/vim-floaterm'
 call plug#end()
+
 " => NERDTree config ------{{{2
 let NERDTreeShowHidden=1
 map <C-t> :NERDTreeToggle<CR>
+
 " => vim-lsp ------{{{2
 " LspInstallServer, LspUninstallServer
 if executable('pyls')
@@ -106,6 +105,7 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
 " vim-airline
 let g:airline_theme='google_dark' " simple
 " vim-floaterm
@@ -113,6 +113,7 @@ let g:airline_theme='google_dark' " simple
 hi Floaterm guibg=black
 " Set floating window border line color to cyan, and background to orange
 hi FloatermBorder guibg=orange guifg=cyan
+
 nnoremap   <silent>   <F7>    :FloatermNew<CR>
 tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
 nnoremap   <silent>   <F8>    :FloatermPrev<CR>
